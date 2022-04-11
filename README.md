@@ -109,3 +109,8 @@ After toggles set, select Run All in the Runtime menu option in Colab.
 ### 11. uncertainty_distributions.ipynb
 No need to set anything just run the file as below.
 Select Run All in the Runtime menu option in Colab.
+
+### 12. interpretability_gradcam_intgrad_saliency_maps.ipynb
+This file applies three interpretability techniques on the original model.
+If there is a model saved by the name model_3_convs.pt, this file can be run.
+No variables to set, select Run All in the Runtime menu option in Colab.
