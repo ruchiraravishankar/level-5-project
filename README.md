@@ -2,18 +2,22 @@
 ## Investigating Deep Transfer Learning with Handwritten Text Images
 
 
-### This code is run on Google Colab.
-It can be run locally but the Drive mounting code has to be removed from the top of each .ipynb file.
-If run on Google Colab, must have access to Google Drive and mount Drive with code provided at the top of each file.
-
 ### Download dataset:
 https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database
 Download the following from the link:
 data/sentences.tgz and data/xml.tgz
 
-Save it in Google Drive in a folder called 'iam_dataset' after unzipping the downloaded .tgz files.
+### Google Colab / Drive Instructions:
+#### This code is run on Google Colab.
+
+It can be run locally but the Drive mounting code has to be removed from the top of each .ipynb file.
+If run on Google Colab, must have access to Google Drive and mount Drive with code provided at the top of each file.
+
+Save the downloaded dataset in Google Drive in a folder called 'iam_dataset' after unzipping the downloaded .tgz files.
 The path on Google Colab should be: /content/drive/MyDrive/iam_dataset/
 If this is not the case, please change the data_path and save_path as necessary.
+
+Please ensure that under the Runtime menu option, in the Change Runtime Type option, the Hardware Accelerator is set to GPU.
 
 If at any point there is a memory error (e.g. CUDA ran out of memory) Restart Runtime in the Runtime menu and run the code again with Run All.
 
@@ -27,11 +31,12 @@ In each .ipynb file, set the data_path and save_path appropriately. If above ins
 '/content/drive/MyDrive/iam_dataset/'
 
 ### 2. original_3_convs_model_node1.ipynb
-To generate the fully trained model (takes very long to run.)
-Use provided model_3_convs.pt to save time and produce best results as it has been run many times to produce the best results.
+Run to generate the fully trained model.
+
 Set save_results to True to save the classification report
 Set save_model to True to save model.
 
+After toggles set, select Run All in the Runtime menu option in Colab.
 
 ### 3. node_2_+_3.ipynb, within the file:
 Toggle NODE variable, choose between 2, 3, and 23 to change data appropriately.
